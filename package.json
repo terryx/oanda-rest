@@ -1,0 +1,30 @@
+{
+  "name": "@terryx/oanda-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terryx/oanda-rest.git"
+  },
+  "keywords": [
+    "oanda"
+  ],
+  "author": "Terry Yuen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terryx/oanda-rest/issues"
+  },
+  "homepage": "https://github.com/terryx/oanda-rest#readme",
+  "dependencies": {
+    "got": "^9.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "sinon": "^6.1.5",
+    "standard": "^11.0.1"
+  }
+}

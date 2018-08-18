@@ -1,0 +1,48 @@
+{
+  "time": "2018-07-30T09:00:40.947773563Z",
+  "prices": [
+    {
+      "type": "PRICE",
+      "time": "2018-07-30T09:00:38.744853278Z",
+      "bids": [
+        {
+          "price": "7274.9",
+          "liquidity": 200
+        }
+      ],
+      "asks": [
+        {
+          "price": "7276.9",
+          "liquidity": 200
+        }
+      ],
+      "closeoutBid": "7274.9",
+      "closeoutAsk": "7276.9",
+      "status": "tradeable",
+      "tradeable": true,
+      "unitsAvailable": {
+        "default": {
+          "long": "200",
+          "short": "200"
+        },
+        "openOnly": {
+          "long": "200",
+          "short": "200"
+        },
+        "reduceFirst": {
+          "long": "200",
+          "short": "200"
+        },
+        "reduceOnly": {
+          "long": "0",
+          "short": "0"
+        }
+      },
+      "quoteHomeConversionFactors": {
+        "positiveUnits": "1.36204000",
+        "negativeUnits": "1.36222000"
+      },
+      "instrument": "NAS100_USD"
+    }
+  ]
+}

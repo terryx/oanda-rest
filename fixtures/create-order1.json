@@ -1,0 +1,31 @@
+{
+  "orderCreateTransaction": {
+    "type": "LIMIT_ORDER",
+    "instrument": "NAS100_USD",
+    "units": "1",
+    "price": "1000.0",
+    "timeInForce": "GTC",
+    "triggerCondition": "DEFAULT",
+    "partialFill": "DEFAULT",
+    "positionFill": "DEFAULT",
+    "stopLossOnFill": {
+      "price": "800.0",
+      "timeInForce": "GTC"
+    },
+    "trailingStopLossOnFill": {
+      "distance": "1200.0",
+      "timeInForce": "GTC"
+    },
+    "reason": "CLIENT_ORDER",
+    "id": "18",
+    "userID": 123456,
+    "accountID": "your own id",
+    "batchID": "18",
+    "requestID": "60472792714063246",
+    "time": "2018-07-30T07:23:45.847672614Z"
+  },
+  "relatedTransactionIDs": [
+    "18"
+  ],
+  "lastTransactionID": "18"
+}
