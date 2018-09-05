@@ -30,6 +30,8 @@ const constructor = ({ apiKey, endpoint, accountID }) => {
 
   method.instrumentsPrice = (query) => toBody(http.get(`/v3/accounts/${accountID}/pricing`, { query }))
 
+  method.closeTrade = (tradeID) => toBody(http.put(`/v3/accounts/${accountID}/trades/${tradeID}/close`))
+
   return method
 }
 

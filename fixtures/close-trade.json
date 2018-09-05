@@ -1,0 +1,79 @@
+{
+    "orderCreateTransaction": {
+        "type": "MARKET_ORDER",
+        "instrument": "NZD_USD",
+        "units": "-20",
+        "timeInForce": "FOK",
+        "positionFill": "REDUCE_ONLY",
+        "reason": "TRADE_CLOSE",
+        "tradeClose": {
+            "units": "ALL",
+            "tradeID": "4119"
+        },
+        "id": "4124",
+        "accountID": "zzzz",
+        "userID": 123,
+        "batchID": "4124",
+        "requestID": "24457321211542715",
+        "time": "2018-09-05T01:54:35.204567296Z"
+    },
+    "orderFillTransaction": {
+        "type": "ORDER_FILL",
+        "orderID": "4124",
+        "instrument": "NZD_USD",
+        "units": "-20",
+        "requestedUnits": "-20",
+        "price": "0.65497",
+        "pl": "-0.0105",
+        "financing": "0.0000",
+        "commission": "0.0000",
+        "accountBalance": "95397.5388",
+        "gainQuoteHomeConversionFactor": "1.37553",
+        "lossQuoteHomeConversionFactor": "1.37572",
+        "guaranteedExecutionFee": "0.0000",
+        "halfSpreadCost": "0.0026",
+        "fullVWAP": "0.65497",
+        "reason": "MARKET_ORDER_TRADE_CLOSE",
+        "tradesClosed": [
+            {
+                "tradeID": "4119",
+                "units": "-20",
+                "realizedPL": "-0.0105",
+                "financing": "0.0000",
+                "price": "0.65497",
+                "guaranteedExecutionFee": "0.0000",
+                "halfSpreadCost": "0.0026"
+            }
+        ],
+        "fullPrice": {
+            "closeoutBid": "0.65497",
+            "closeoutAsk": "0.65516",
+            "timestamp": "2018-09-05T01:54:34.234487523Z",
+            "bids": [
+                {
+                    "price": "0.65497",
+                    "liquidity": "10000000"
+                }
+            ],
+            "asks": [
+                {
+                    "price": "0.65516",
+                    "liquidity": "10000000"
+                }
+            ]
+        },
+        "id": "4125",
+        "accountID": "zzzzzz",
+        "userID": 123,
+        "batchID": "4124",
+        "requestID": "24457321211542715",
+        "time": "2018-09-05T01:54:35.204567296Z"
+    },
+    "relatedTransactionIDs": [
+        "4124",
+        "4125",
+        "4126",
+        "4127"
+    ],
+    "lastTransactionID": "4127"
+}

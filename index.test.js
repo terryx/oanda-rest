@@ -96,3 +96,11 @@ test.serial('GET instruments candles', t => {
     t.is(res.instrument, 'NAS100_USD')
   })
 })
+
+test.serial('PUT trade close', t => {
+  const api = createStub('./fixtures/close-trade.json')
+
+  return api.closeTrade(4119).then(res => {
+    t.is(res.orderFillTransaction.tradesClosed[0].tradeID, '4119')
+  })
+})
