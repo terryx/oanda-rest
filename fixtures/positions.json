@@ -1,0 +1,30 @@
+{
+    "positions": [
+        {
+            "instrument": "WHEAT_USD",
+            "long": {
+                "units": "0",
+                "pl": "20.2382",
+                "resettablePL": "20.2382",
+                "financing": "-0.7181",
+                "guaranteedExecutionFees": "0.0000",
+                "unrealizedPL": "0.0000"
+            },
+            "short": {
+                "units": "0",
+                "pl": "10.9480",
+                "resettablePL": "10.9480",
+                "financing": "1.2653",
+                "guaranteedExecutionFees": "0.0000",
+                "unrealizedPL": "0.0000"
+            },
+            "pl": "31.1862",
+            "resettablePL": "31.1862",
+            "financing": "0.5472",
+            "commission": "0.0000",
+            "guaranteedExecutionFees": "0.0000",
+            "unrealizedPL": "0.0000",
+            "marginUsed": "0.0000"
+        }
+    ]
+}

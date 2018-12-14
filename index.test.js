@@ -104,3 +104,11 @@ test.serial('PUT trade close', t => {
     t.is(res.orderFillTransaction.tradesClosed[0].tradeID, '4119')
   })
 })
+
+test.serial('PUT trade close', t => {
+  const api = createStub('./fixtures/positions.json')
+
+  return api.positions().then(res => {
+    t.is(res.positions.length > 0, true)
+  })
+})
