@@ -1,0 +1,53 @@
+{
+    "trades": [
+        {
+            "id": "18837",
+            "instrument": "USD_SEK",
+            "price": "8.98470",
+            "openTime": "2018-12-20T22:00:23.247904691Z",
+            "initialUnits": "1000",
+            "initialMarginRequired": "41.1321",
+            "state": "OPEN",
+            "currentUnits": "1000",
+            "realizedPL": "0.0000",
+            "financing": "0.0000",
+            "unrealizedPL": "-2.0275",
+            "marginUsed": "41.0562",
+            "takeProfitOrder": {
+                "id": "18838",
+                "createTime": "2018-12-20T22:00:23.247904691Z",
+                "type": "TAKE_PROFIT",
+                "tradeID": "18837",
+                "price": "8.99068",
+                "timeInForce": "GTC",
+                "triggerCondition": "DEFAULT",
+                "state": "PENDING"
+            }
+        },
+        {
+            "id": "18834",
+            "instrument": "USD_JPY",
+            "price": "111.297",
+            "openTime": "2018-12-20T22:00:23.219463097Z",
+            "initialUnits": "1000",
+            "initialMarginRequired": "27.4214",
+            "state": "OPEN",
+            "currentUnits": "1000",
+            "realizedPL": "0.0000",
+            "financing": "0.0000",
+            "unrealizedPL": "0.2827",
+            "marginUsed": "27.3708",
+            "takeProfitOrder": {
+                "id": "18835",
+                "createTime": "2018-12-20T22:00:23.219463097Z",
+                "type": "TAKE_PROFIT",
+                "tradeID": "18834",
+                "price": "111.388",
+                "timeInForce": "GTC",
+                "triggerCondition": "DEFAULT",
+                "state": "PENDING"
+            }
+        }
+    ],
+    "lastTransactionID": "18839"
+}

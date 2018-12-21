@@ -34,6 +34,8 @@ const constructor = ({ apiKey, endpoint, accountID }) => {
 
   method.positions = () => toBody(http.get(`/v3/accounts/${accountID}/positions`))
 
+  method.trades = () => toBody(http.get(`/v3/accounts/${accountID}/trades`))
+
   return method
 }
 

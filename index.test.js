@@ -112,3 +112,12 @@ test.serial('PUT trade close', t => {
     t.is(res.positions.length > 0, true)
   })
 })
+
+test.serial('GET trades', t => {
+  const api = createStub('./fixtures/trades.json')
+
+  return api.trades().then(res => {
+    t.is(res.trades.length > 0, true)
+  })
+})
+
