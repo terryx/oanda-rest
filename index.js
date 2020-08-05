@@ -1,42 +1,57 @@
 const got = require('got')
 
-const constructor = ({ apiKey, endpoint, accountID }) => {
-  const http = got.extend({
-    headers: { 
-      'user-agent': null,
-      'Authorization': `Bearer ${apiKey}` 
-    },
-    baseUrl: endpoint,
-    json: true
-  })
+module.exports = class OandaV20 {
+  constructor (accountID, apiKey, baseURL) {
+    this.accountID = accountID
 
-  const method = {}
-
-  const toBody = (promise) => {
-    return promise.then(res => res.body)
+    this.http = got.extend({
+      headers: {
+        'user-agent': '',
+        Authorization: `Bearer ${apiKey}`
+      },
+      baseUrl: baseURL,
+      json: true
+    })
   }
 
-  method.accounts = () => toBody(http.get(`/v3/accounts/${accountID}`))
+  toBody (promise) {
+    return promise
+      .then(res => res.body)
+      .catch(err => {
+        console.log(err.body)
+        return err.body
+      })
+  }
 
-  method.accountsSummary = () => toBody(http.get(`/v3/accounts/${accountID}/summary`))
+  accounts () {
+    return this.toBody(this.http.get(`/v3/accounts/${this.accountID}`))
+  }
 
-  method.accountsInstruments = () => toBody(http.get(`/v3/accounts/${accountID}/instruments`))
+  createOrder (body) {
+    return this.toBody(this.http.post(`/v3/accounts/${this.accountID}/orders`, { body }))
+  }
 
-  method.createOrder = (body) => toBody(http.post(`/v3/accounts/${accountID}/orders`, { body }))
+  cancelOrder (orderID) {
+    return this.toBody(this.http.put(`/v3/accounts/${this.accountID}/orders/${orderID}/cancel`))
+  }
 
-  method.cancelOrder = (orderID) => toBody(http.put(`/v3/accounts/${accountID}/orders/${orderID}/cancel`))
+  instrumentsCandles (instrument, query) {
+    return this.toBody(this.http.get(`/v3/instruments/${instrument}/candles`, { query }))
+  }
 
-  method.instrumentsCandles = (instrument, query) => toBody(http.get(`/v3/instruments/${instrument}/candles`, { query }))
+  pricing (query) {
+    return this.toBody(this.http.get(`/v3/accounts/${this.accountID}/pricing`, { query }))
+  }
 
-  method.instrumentsPrice = (query) => toBody(http.get(`/v3/accounts/${accountID}/pricing`, { query }))
+  closeTrade (tradeID) {
+    return this.toBody(this.http.put(`/v3/accounts/${this.accountID}/trades/${tradeID}/close`))
+  }
 
-  method.closeTrade = (tradeID) => toBody(http.put(`/v3/accounts/${accountID}/trades/${tradeID}/close`))
+  openPositions () {
+    return this.toBody(this.http.get(`/v3/accounts/${this.accountID}/openPositions`))
+  }
 
-  method.positions = () => toBody(http.get(`/v3/accounts/${accountID}/positions`))
-
-  method.trades = () => toBody(http.get(`/v3/accounts/${accountID}/trades`))
-
-  return method
+  closePosition (instrument, body) {
+    return this.toBody(this.http.put(`/v3/accounts/${this.accountID}/positions/${instrument}/close`, { body }))
+  }
 }
-
-module.exports = constructor

@@ -1,7 +1,7 @@
 ### Overview
 Oanda Rest is a api wrapper for [oanda rest-v20](http://developer.oanda.com/rest-live-v20/introduction/) with [got](https://github.com/sindresorhus/got) serving as underlying HTTP requests library
 ### Getting started
-Requires NodeJS >= v4 
+Requires NodeJS >= v10
 
 ```
 $ npm install @terryx/oanda-rest
